@@ -15,10 +15,10 @@ function myFunction() {
 }
 myFunction();
 
+
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
 // Because the nested function is scoped to the parent function so it is only available inside of {}
-
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -35,7 +35,6 @@ function summation(num) {
   }
   return sum;
 }
-
 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
