@@ -158,7 +158,8 @@ function greeting(first, last){
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
  
 
-
+// const add = (a, b) => a + b;
+// const multiply = (a, b) => a * b;
 
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
