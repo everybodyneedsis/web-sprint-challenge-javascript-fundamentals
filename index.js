@@ -59,7 +59,7 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(zooAnimals){
+  function animalNames(arr){
     let displayNames = [];
     zooAnimals.forEach(function(item){
       return displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
@@ -67,7 +67,7 @@ const zooAnimals = [
     return displayNames;
   }
 
-  console.log('request 1', animalNames);
+  console.log('request 1', animalNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -75,22 +75,28 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(zooAnimals){
+  function lowerCaseNames(arr){
     const lowercase = zooAnimals.map(function(item){
       return item.animal_name.toLowerCase();
     });
+    return lowercase;
   }
   
-  console.log('request 2', lowerCaseNames);
+  console.log('request 2', lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(arr){
+    const lowPop = zooAnimals.filter(function(item){
+      return item.population < 5;
+    });
+    return lowPop
   }
+
+  console.log('request 3', lowPopulationAnimals(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
