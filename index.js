@@ -30,11 +30,11 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 function summation(num) {
   let sum = 0;
-  for (let i = 0; i<= num; i++){
+  for (let i = 0; i <= num; i++){
     sum += i;
   }
   return sum;
-}
+}                         
 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -59,9 +59,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(data){
+    const displayNames = zooAnimals.forEach(function(item){
+      return item.animal_name && item.scientific_name;
+    });
+    return displayNames;
   }
+
+  console.log('request 1', animalNames);
   
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
