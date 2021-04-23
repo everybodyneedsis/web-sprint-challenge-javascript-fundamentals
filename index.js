@@ -59,9 +59,10 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(data){
-    const displayNames = zooAnimals.forEach(function(item){
-      return item.animal_name && item.scientific_name;
+  function animalNames(zooAnimals){
+    let displayNames = [];
+    zooAnimals.forEach(function(item){
+      return displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
     });
     return displayNames;
   }
@@ -74,10 +75,13 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(zooAnimals){
+    const lowercase = zooAnimals.map(function(item){
+      return item.animal_name.toLowerCase();
+    });
   }
   
+  console.log('request 2', lowerCaseNames);
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
